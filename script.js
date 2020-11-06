@@ -7,11 +7,12 @@ function move(){
   if(i===0){
     timer = setInterval(move , 1)
     i = 1
-    width=100;
   }
   width -= .1
   if(width <= 0){
     clearInterval(timer);
+    i=0;
+    width=100;
   }
   bar.style.width = width +"%";
   bar.innerHTML = width.toFixed(0) +"%"
